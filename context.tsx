@@ -1,7 +1,6 @@
 import React, { createContext, ReactElement, useEffect, useRef, useState } from 'react'
 import { View, StyleSheet, Animated } from 'react-native'
 import FastImage, { Source } from 'react-native-fast-image'
-import R from 'res/R'
 
 type ImageZoomContextState = {
   isZooming: boolean;
@@ -36,7 +35,7 @@ const defaultValues: ImageZoomContextState = {
   measuedView: { fx: 0, fy: 0, width: 0, height: 0, px: 0, py: 0 },
   setMeasuredView: () => { },
 
-  source: R.images.rentalImage,
+  source: '',
   setSource: () => { }
 }
 
@@ -156,7 +155,7 @@ const styles = StyleSheet.create({
   },
   rental: {
     justifyContent: 'flex-start',
-    marginVertical: R.styles.defaultMargin * 2
+    marginVertical: 16
   },
   absolute: {
     position: 'absolute'
